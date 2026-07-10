@@ -9,10 +9,13 @@ function crearTarjetas(){
 }
 function pintarTarjetas(){
     let contenido = "";
-    let divTarjetas = document.getElementById("txtDesde");
-
-    for(let i=1; i<=10;i++){
+    let divTarjetas = document.getElementById("divTarjetas");
+    let desde = parseInt(document.getElementById("txtDesde").value);
+    let hasta = parseInt(document.getElementById("txtHasta").value);
+     
+    for(let i=desde; i<=hasta;){
         contenido = contenido + "<div class='item'>"+i+"</div>";
-        divTarjetas.innerHTML = contenido;
     }
+    divTarjetas.innerHTML = contenido;
 }
+ 
